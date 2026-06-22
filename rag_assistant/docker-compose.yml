@@ -1,0 +1,16 @@
+services:
+  rag-app:
+    build: .
+    container_name: rag_study_assistant
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data/notebooks:/app/data/notebooks
+      - ./data/models_cache:/app/data/models_cache
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - HF_HOME=/app/data/models_cache
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
