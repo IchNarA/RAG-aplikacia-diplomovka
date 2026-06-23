@@ -11,7 +11,7 @@ RAG systém s webovým rozhraním (Streamlit), ktorý spracuje PDF/XLSX/DOCX dok
 - **Spracovanie viacerých formátov dokumentov:** PDF, XLSX, DOCX
 - **Dva režimy spracovania PDF:**
   - **Rýchly režim** – extrakcia textu pomocou `pymupdf4llm`
-  - **Pomalý, kvalitný režim** – extrakcia pomocou `MinerU` (vyššia presnosť, napr. pri zložitejšom rozložení dokumentu, tabuľkách a podobne)
+  - **Pomalý, kvalitný režim** – extrakcia pomocou `MinerU` (vyššia presnosť)
 - **Webové rozhranie** (Streamlit) na nahrávanie dokumentov a komunikáciu s aplikáciou formou otázok a odpovedí
 - **Lokálny LLM** – generovanie odpovedí prostredníctvom modelu nasadeného cez Ollama (bez závislosti na externom API)
 
